@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+
+</head>
+<body>
+	<p style="font-size: 30px; color:blue;" class="test">Chuyển đổi met sang feet</p>
+	<input type="number" placeholder="Nhập Met muốn đổi" id="met">
+	<button onclick="chuyenMet();" style="border-radius: 8px">Đổi</button>
+	<p id="giatrimet" class="text"></p>
+
+	<p style="font-size: 30px; color:blue;" class="test">Chuyển đổi feet sang met</p>
+	<input type="number" placeholder="Nhập Feet muốn đổi" id="feet">
+	<button onclick="chuyenFeet();" style="border-radius: 8px">Đổi</button>
+	<p id="giatrifeet" class="text"></p>
+	<script>
+	function chuyenMet(){
+		var doimet = document.getElementById("met").value;
+		var tinhfoot =  doimet * 3.279;
+		document.getElementById("giatrimet").innerHTML = "Số feet sau khi được đổi là: " +tinhfoot;
+	}
+	function chuyenFeet(){
+		var doifeet = document.getElementById("feet").value;
+		var tinhmet =  doifeet * 0.305;
+		document.getElementById("giatrifeet").innerHTML = "Số met sau khi được đổi là: " +  tinhmet;
+	}	
+	</script>
+</body>
+</html>
